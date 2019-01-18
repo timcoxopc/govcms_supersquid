@@ -1,0 +1,21 @@
+name: 'GovCMS 8 UI-Kit Subtheme with Super Squid'
+description: 'An subtheme template for GovCMS UI-Kit featuring Super Squid a JS based Mega Menu'
+core: 8.x
+type: theme
+base theme: govcms8_uikit_starter
+libraries:
+  - govcms_supersquid/global-styling
+regions:
+  logo: 'Logo'
+  navigation: 'Navigation'
+  search: 'Search'
+  help: 'Help'
+  admin: 'Admin'
+  content_top: 'Content top'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  postscript_1: 'Postscript 1'
+  postscript_2: 'Postscript 2'
+  postscript_3: 'Postscript 3'
+  postscript_4: 'Postscript 4'
+  legal: 'Legal'

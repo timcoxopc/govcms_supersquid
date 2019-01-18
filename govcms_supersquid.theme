@@ -1,0 +1,20 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatch;
+use Drupal\block\Entity\Block;
+
+function govcms_supersquid_preprocess_block(&$variables) {
+ if($variables['label'] == 'Super Squid'){
+   $menu_name = "main";
+   $menu_tree = \Drupal::service('menu.link_tree');
+
+   $parameters = new \Drupal\Core\Menu\MenuTreeParameters();
+   $parameters
+     ->setMaxDepth(2);
+
+   $tree = $menu_tree->load($menu_name, $parameters);
+   $menu = $menu_tree->build($tree);
+   $variables['supersquid_menu'] = $menu;
+  }
+}
